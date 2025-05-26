@@ -7,3 +7,7 @@ export { default as Popular } from "./Popular";
 export { default as PopularInIndia } from "./PopularInIndia";
 export { default as PopularInternational } from "./PopularInternational";
 export { default as Featured } from "./Featured";
+export { default as Gallery } from "./Gallery";
+export { default as GalleryCard } from "./GalleryCard";
+export { default as PopularHotels } from "./PopularHotels";
+export { default as Footer } from "./Footer";

@@ -42,7 +42,7 @@ const Slider = () => {
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           Welcome to Jingle Holiday Bazaar Pvt Ltd.
         </h1>
-        <button className="bg-black border-2 border-black hover:bg-white hover:text-black px-8 py-3 rounded-full border-radius-4 text-white font-semibold">
+        <button className="bg-black border-2 border-black hover:bg-white hover:text-black px-8 py-3 rounded-full border-radius-4 text-white font-bold">
           Contact
         </button>
       </div>

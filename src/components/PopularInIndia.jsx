@@ -2,6 +2,20 @@ import img1 from "../assets/popularInIndia/Jallianwala-Bagh.webp";
 import img2 from "../assets/popularInIndia/Gangtok.webp";
 import img3 from "../assets/popularInIndia/Taj-mahal.webp";
 
+import { motion } from "framer-motion";
+
+const fadeInVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
 const PopularInIndia = () => {
   return (
     <div className="p-6">
@@ -19,41 +33,59 @@ const PopularInIndia = () => {
       </div>
 
       <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[500px]">
-        {/* 1st image */}
-        <div className="row-span-2 col-span-2">
-          <figure className="relative w-full h-full rounded-lg overflow-hidden">
-            <img
-              src={img1}
-              alt="Amritsar"
-              className="w-full h-full object-cover"
-            />
-            <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2">
-              Amritsar
-            </figcaption>
-          </figure>
-        </div>
+        {/* 1st image - Amritsar */}
+        <motion.figure
+          className="relative w-full h-full rounded-lg overflow-hidden row-span-2 col-span-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInVariant}
+        >
+          <img
+            src={img1}
+            alt="Amritsar"
+            className="w-full h-full object-cover"
+          />
+          <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2 bg-black/40">
+            Amritsar
+          </figcaption>
+        </motion.figure>
 
-        <figure className="relative w-full h-full rounded-lg overflow-hidden">
+        {/* Gangtok */}
+        <motion.figure
+          className="relative w-full h-full rounded-lg overflow-hidden"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInVariant}
+        >
           <img
             src={img2}
             alt="Gangtok"
             className="w-full h-full object-cover"
           />
-          <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2">
+          <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2 bg-black/40">
             Gangtok
           </figcaption>
-        </figure>
+        </motion.figure>
 
-        <figure className="relative w-full h-full rounded-lg overflow-hidden">
+        {/* Taj Mahal */}
+        <motion.figure
+          className="relative w-full h-full rounded-lg overflow-hidden"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInVariant}
+        >
           <img
             src={img3}
             alt="Taj Mahal"
             className="w-full h-full object-cover"
           />
-          <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2">
+          <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2 bg-black/40">
             Taj Mahal
           </figcaption>
-        </figure>
+        </motion.figure>
       </div>
     </div>
   );

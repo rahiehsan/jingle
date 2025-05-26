@@ -1,6 +1,19 @@
+import { motion } from "framer-motion";
 import img1 from "../assets/featured/leh.webp";
 import img2 from "../assets/featured/Solang-Valley.webp";
 import img3 from "../assets/featured/goa.webp";
+
+const fadeInVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 const Featured = () => {
   return (
@@ -17,12 +30,18 @@ const Featured = () => {
       <div className="flex gap-8">
         {/* First tour: full column */}
         <div className="flex flex-col w-2/3">
-          <figure className="relative rounded-lg overflow-hidden mb-4">
-            <img src={img1} alt="Leh" className="w-full h-64 object-cover" />
-            <figcaption className="absolute bottom-0 left-0 w-full text-white py-2 text-center text-lg font-semibold">
+          <motion.figure
+            className="relative rounded-lg overflow-hidden mb-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInVariant}
+          >
+            <img src={img1} alt="Leh" className="w-full h-90 object-cover" />
+            <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2 bg-black/40">
               Leh
             </figcaption>
-          </figure>
+          </motion.figure>
           <div>
             <h2 className="text-xl font-semibold mb-2">
               Week At Thiksey Monastery
@@ -44,16 +63,22 @@ const Featured = () => {
         <div className="flex flex-col gap-8 w-2/3">
           {/* Second tour */}
           <div className="flex gap-6">
-            <figure className="relative w-1/3 rounded-lg overflow-hidden">
+            <motion.figure
+              className="relative w-1/3 rounded-lg overflow-hidden"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInVariant}
+            >
               <img
                 src={img2}
                 alt="Solang Valley"
-                className="w-full h-40 object-cover"
+                className="w-full h-60 object-cover"
               />
-              <figcaption className="absolute bottom-0 left-0 w-full text-white py-1 text-center font-semibold">
+              <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2 bg-black/40">
                 Manali
               </figcaption>
-            </figure>
+            </motion.figure>
             <div className="w-2/3">
               <h2 className="text-xl font-semibold mb-2">
                 Week At Solang Valley, Manali
@@ -72,12 +97,18 @@ const Featured = () => {
 
           {/* Third tour */}
           <div className="flex gap-6">
-            <figure className="relative w-1/3 rounded-lg overflow-hidden">
-              <img src={img3} alt="Goa" className="w-full h-40 object-cover" />
-              <figcaption className="absolute bottom-0 left-0 w-full text-white py-1 text-center font-semibold">
+            <motion.figure
+              className="relative w-1/3 rounded-lg overflow-hidden"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInVariant}
+            >
+              <img src={img3} alt="Goa" className="w-full h-60 object-cover" />
+              <figcaption className="absolute bottom-0 left-0 w-full text-white text-center py-2 bg-black/40">
                 Goa
               </figcaption>
-            </figure>
+            </motion.figure>
             <div className="w-2/3">
               <h2 className="text-xl font-semibold mb-2">
                 Week At Beach in Goa

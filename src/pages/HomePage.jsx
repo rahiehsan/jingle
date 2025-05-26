@@ -1,4 +1,13 @@
-import { Navbar, Slider, Services, Popular, Featured } from "../components";
+import {
+  Navbar,
+  Slider,
+  Services,
+  Popular,
+  Featured,
+  Gallery,
+  PopularHotels,
+  Footer,
+} from "../components";
 const HomePage = () => {
   return (
     <div>
@@ -7,6 +16,9 @@ const HomePage = () => {
       <Services />
       <Popular />
       <Featured />
+      <Gallery />
+      <PopularHotels />
+      <Footer />
     </div>
   );
 };

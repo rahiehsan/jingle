@@ -28,7 +28,8 @@ const Navbar = () => {
               {item}
             </li>
           ))}
-          <li className="hover:bg-blue-600 hover:text-white bg-blue-500 text-white px-4 py-2 rounded cursor-pointer transition">
+
+          <li className="bg-black text-white px-6 py-2 rounded-full hover:bg-white hover:text-black border-2 border-black transition">
             Pay now
           </li>
         </ul>
