@@ -1,0 +1,9 @@
+export { default as Navbar } from "./Navbar";
+export { default as Slider } from "./Slider";
+export { default as Services } from "./Services";
+export { default as ServiceModal } from "./ServiceModal";
+export { default as ServiceCard } from "./ServiceCard";
+export { default as Popular } from "./Popular";
+export { default as PopularInIndia } from "./PopularInIndia";
+export { default as PopularInternational } from "./PopularInternational";
+export { default as Featured } from "./Featured";
